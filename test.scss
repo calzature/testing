@@ -1,0 +1,181 @@
+$default-background-color: #121212;
+$l-gray-3: #b3b3b3;
+
+body {
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+#purchasePopIn {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 102;
+  .buttons {
+    position: absolute;
+    left: 218px;
+    bottom: 0;
+  }
+  .backGround {
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    background-color: #121212;
+  }
+  .rentPopIn {
+    top: 30%;
+    left: 25%;
+    position: absolute;
+    width: 650px;
+
+    .buttons {
+      position: absolute;
+      left: 220px;
+      bottom: 108px;
+      height: 40px;
+    }
+
+    .btn--primary {
+      min-width: 120px;
+      font-size: 1rem;
+      padding: 0 20px;
+      margin-right: 15px;
+      line-height: 37px;
+      border-radius: 30px;
+      // line-height: 56px;
+      background-color: transparent;
+      color: #e6e6e6;
+      border: solid;
+      border-width: 2px;
+      border-color: #7e7e7e;
+      float: left;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      user-select: none;
+      &.inactive {
+        color: #7e7e7e;
+        border-color: #393939;
+      }
+    }
+    .buttons{
+      .Selected{
+        border-color:$default-background-color;
+      }
+    }
+    .accent-background-color {
+      border-color: transparent;
+      color: $default-background-color;
+    }
+
+    .rentPoster {
+      float: left;
+      margin-right: 20px;
+      opacity: 1;
+      width: 200px;
+      height: 300px;
+      margin-bottom: 100px;
+    }
+    .rentPassHolder {
+      display: block;
+      position: absolute;
+      bottom: 170px;
+      left: 220px;
+      &.accent-color {
+        > span {
+          color: inherit;
+        }
+        .rentInput {
+          color: inherit;
+        }
+      }
+    }
+    .rentPcContent {
+      font-size: 20px;
+      line-height: 29px;
+      color: white;
+    }
+    .rentInfo {
+      min-height: 52px;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .rentInput {
+      background: none;
+      padding-left: 8px;
+      height: 30px;
+      width: 207px;
+      border: none;
+      color: inherit;
+      outline: none;
+      font-size: 29px;
+      letter-spacing: 48px;
+    }
+    .rentPin {
+      float: left;
+      margin-right: 5px;
+      font-size: 25px;
+      color: $l-gray-3;
+    }
+    .inputWrapper {
+      position: relative;
+      display: block;
+      width: 210px;
+      height: 30px;
+      float: left;
+      color: $l-gray-3;
+      &:after {
+        content: '\e993 \e993 \e993 \e993';
+        font-family: m10-icons;
+        position: absolute;
+        width: 100%;
+        height: 17px;
+        top: 16px;
+        left: 0;
+        pointer-events: none;
+        font-size: 34px;
+        letter-spacing: 24px;
+        color: inherit;
+        overflow: hidden;
+      }
+    }
+    #titleYear {
+      min-height: 50px;
+      margin-bottom: 10px;
+    }
+    #rentTitles {
+      font-size: 27px;
+      line-height: 29px;
+      margin-right: 10px;
+      max-width: 420px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      float: left;
+
+      &.release-year {
+        max-width: 340px;
+      }
+    }
+    #rentReleaseYear {
+      font-size: 27px;
+      line-height: 29px;
+      display: none;
+    }
+    #rentIncorrectPin {
+      display: block;
+      font-size: 20px;
+      line-height: 27px;
+      width: 440px;
+      position: absolute;
+      bottom: -30px;
+      left: 220px;
+      height: 120px;
+      margin-top: 5px;
+      overflow: hidden;
+      color: red;
+    }
+  }
+}
